@@ -1,0 +1,13 @@
+{
+    "display_name": "SR Message Fixer",
+    "loading_order": 10,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "",
+    "author": "Sreesha",
+    "version": "1.0.0",
+    "hooks": {
+        "activate": "init"
+    }
+}
