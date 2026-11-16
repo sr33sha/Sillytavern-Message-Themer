@@ -1,5 +1,5 @@
 # Sillytavern-Message-Themer
-A small theming extension to fix theming and ordering of trackers, for my custom preset
+A small theming extension to fix theming and ordering of trackers, for my custom preset.
 
 <img width="1920" height="1080" alt="brave_6281J86Cr0" src="https://github.com/user-attachments/assets/b98aef93-1051-4831-bd67-9b44d400a5fd" />
 
