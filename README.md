@@ -8,4 +8,4 @@ A small theming extension to fix theming and ordering of trackers, for my custom
 Below is the link to my chat completion preset:
 https://drive.google.com/drive/folders/12PKmpHMBlhv4zWRBtAY0bYV_uIdcSzAp?usp=sharing
 
-Goes best with its sibling extension, [Sillytavern-Character-Expressions-Helper](https://github.com/sr33sha/Sillytavern-Character-Expressions-Helper) and [Sillytavern-Per-Character-BG](https://github.com/sr33sha/Sillytavern-Per-Character-BG)
+Goes best with its sibling extensions, [Sillytavern-Character-Expressions-Helper](https://github.com/sr33sha/Sillytavern-Character-Expressions-Helper) and [Sillytavern-Per-Character-BG](https://github.com/sr33sha/Sillytavern-Per-Character-BG)
