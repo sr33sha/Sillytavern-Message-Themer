@@ -7,7 +7,7 @@ const HUD_RE = /`?\[\s*🌐\s*HUD\s*:?\s*([^\]]*)\]`?/;
 
 const IM_RE = /💭 Inner Monologue\s*\n+\s*\*([\s\S]*?)\*(?=\s*(?:\n|$))/;
 
-const STATS_RE = /📊 STATS\s*\n+\s*Trust:\s*(\d{1,3})\s*\n+\s*Tension:\s*(\d{1,3})\s*\n+\s*Attraction:\s*(\d{1,3})\s*\n+\s*Loyalty:\s*(\d{1,3})\s*\n+\s*Emotion:\s*([^\n]+?)\s*\n+\s*([^\n]+?)\s+Virginity:\s*([^\n]+?)\s*\n+\s*([^\n]+?)\s+Virginity:\s*([^\n]+?)\s*\n+\s*([^\n]+?)\s+Status:\s*([^\n]+?)\s*\n+\s*([^\n]+?)\s+Status:\s*([^\n]+?)\s*\n+\s*Current Dynamic:\s*([^\n]+)/;
+const STATS_RE = /📊 STATS\s*\n+\s*Trust:\s*(\d{1,3})\s*\n+\s*Tension:\s*(\d{1,3})\s*\n+\s*Affection:\s*(\d{1,3})\s*\n+\s*Lust:\s*(\d{1,3})\s*\n+\s*Loyalty:\s*(\d{1,3})\s*\n+\s*Emotion:\s*([^\n]+?)\s*\n+\s*([^\n]+?)\s+Virginity:\s*([^\n]+?)\s*\n+\s*([^\n]+?)\s+Virginity:\s*([^\n]+?)\s*\n+\s*([^\n]+?)\s+Status:\s*([^\n]+?)\s*\n+\s*([^\n]+?)\s+Status:\s*([^\n]+?)\s*\n+\s*Current Dynamic:\s*([^\n]+)/;
 
 // ─── HTML builders ─────────────────────────────────────────────────────────────
 
@@ -22,7 +22,7 @@ function buildIMHTML(rawContent) {
     return `<div style="background:rgba(120,53,15,.15);border:1px solid rgba(234,88,12,.35);border-radius:10px;padding:8px 12px;margin:4px 0;width:100%;box-sizing:border-box;"><div style="font-weight:700;color:#fb923c;font-size:.82em;margin-bottom:3px;">💭 Inner Monologue</div><div style="font-style:italic;color:#fde68a;font-size:.88em;line-height:1.5;">${content}</div></div>`;
 }
 
-function buildStatsHTML(t, ten, att, loy, emo, v1n, v1, v2n, v2, s1n, s1, s2n, s2, dyn) {
+function buildStatsHTML(t, ten, aff, lus, loy, emo, v1n, v1, v2n, v2, s1n, s1, s2n, s2, dyn) {
     const bar = (val, grad) =>
         `<div style="flex:1;height:5px;border-radius:3px;background:rgba(255,255,255,.1);overflow:hidden;"><div style="height:100%;width:${val}%;background:${grad};border-radius:3px;"></div></div>`;
     const row = (label, val, grad) =>
@@ -33,7 +33,8 @@ function buildStatsHTML(t, ten, att, loy, emo, v1n, v1, v2n, v2, s1n, s1, s2n, s
         `<div style="display:flex;flex-direction:column;gap:3px;">` +
         row('TRUST',      t,   'linear-gradient(90deg,#22d3ee,#0891b2)') +
         row('TENSION',    ten, 'linear-gradient(90deg,#fb923c,#ea580c)') +
-        row('ATTRACTION', att, 'linear-gradient(90deg,#f472b6,#db2777)') +
+        row('AFFECTION',  aff, 'linear-gradient(90deg,#f472b6,#db2777)') +
+        row('LUST',       lus, 'linear-gradient(90deg,#f43f5e,#be123c)') +
         row('LOYALTY',    loy, 'linear-gradient(90deg,#a78bfa,#7c3aed)') +
         `</div>` +
         `<div style="margin-top:5px;padding-top:4px;border-top:1px solid rgba(124,58,237,.25);display:flex;flex-direction:column;gap:2px;">` +
